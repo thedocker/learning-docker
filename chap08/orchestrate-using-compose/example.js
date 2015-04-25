@@ -17,7 +17,7 @@ var client = redis.createClient(6379, 'redis');
 
 // Here all the keys proceeds with "/", because
 // URL parser always have "/" as its first character
-client.set("/", "Welcome to Docker-Composer helper\nEnter the docker-compose command in the URL for help\n", redis.print);
+client.set("/", "Welcome to Docker-Compose helper\nEnter the docker-compose command in the URL for help\n", redis.print);
 client.set("/build", "Build or rebuild services", redis.print);
 client.set("/kill", "Kill contianers", redis.print);
 
