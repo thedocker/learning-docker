@@ -9,7 +9,7 @@ var redis = require('redis');
 // createClient API is called with
 //  -- 6379, a well-known port to which the
 //           redis server listens to
-//  -- redis, is the link name of the container
+//  -- redis, is the name of the service (container)
 //            that runs redis server
 var client = redis.createClient(6379, 'redis');
 
