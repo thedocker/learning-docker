@@ -1,9 +1,11 @@
-web:
-  build: .
-  command: node /myapp/example.js
-  links:
-   - redis
-  ports:
-   - 8080:80
-redis:
-  image: redis:latest
+version: "3"
+services:
+  web:
+    build: .
+    command: node /myapp/example.js
+    depends_on:
+    - redis
+    ports:
+    - 8080:80
+  redis:
+    image: redis:latest
