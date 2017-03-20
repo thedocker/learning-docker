@@ -19,7 +19,7 @@ var client = redis.createClient(6379, 'redis');
 // URL parser always have "/" as its first character
 client.set("/", "Welcome to Docker-Compose helper\nEnter the docker-compose command in the URL for help\n", redis.print);
 client.set("/build", "Build or rebuild services", redis.print);
-client.set("/kill", "Kill contianers", redis.print);
+client.set("/kill", "Kill containers", redis.print);
 
 var server = http.createServer(function (request, response) {
   var href = url.parse(request.url, true).href;
